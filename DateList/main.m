@@ -23,9 +23,8 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"How many items are inside dateList? There are %lu dates", dateCount);
         
-        for (int i = 0; i < dateCount; i++) {
-            NSDate *d = dateList[i];
-            NSLog(@"Here's a date: %@", d);
+        for (NSDate *d in dateList) {
+            NSLog(@"Here is another date: %@", d);
         }
     }
     return 0;
