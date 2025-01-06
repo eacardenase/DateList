@@ -19,7 +19,14 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The third date is %@", dateList[2]);
 //        NSLog(@"The fourth date is %@", dateList[3]); // out-of-range error
         
-        NSLog(@"How many items are inside dateList? There are %lu dates", [dateList count]);
+        NSInteger dateCount = [dateList count];
+        
+        NSLog(@"How many items are inside dateList? There are %lu dates", dateCount);
+        
+        for (int i = 0; i < dateCount; i++) {
+            NSDate *d = dateList[i];
+            NSLog(@"Here's a date: %@", d);
+        }
     }
     return 0;
 }
